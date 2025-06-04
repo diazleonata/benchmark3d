@@ -1,0 +1,37 @@
+body {
+    margin: 0;
+    overflow: hidden;
+    font-family: sans-serif;
+    background-color: black;
+}
+
+#fps {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 100;
+}
+
+#result {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 100;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 8px 12px;
+    border-radius: 8px;
+    display: none;
+    white-space: pre-line;
+}
+
+#preset {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    z-index: 100;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 8px 12px;
+    border-radius: 8px;
+}

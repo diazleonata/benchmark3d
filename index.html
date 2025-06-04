@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>3D Web Benchmark</title>
+        <link rel="stylesheet" href="src/style.css" />
+    </head>
+    <body>
+        <div id="fps"></div>
+        <div id="result"></div>
+        <div id="preset">
+            <label for="quality">Quality:</label>
+            <select id="quality">
+                <option value="low">Low</option>
+                <option value="medium" selected>Medium</option>
+                <option value="high">High</option>
+            </select>
+            <button id="startBtn">Start Benchmark</button>
+        </div>
+        <script type="module" src="src/main.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/eruda"></script>
+        <script>
+            eruda.init();
+        </script>
+    </body>
+</html>
