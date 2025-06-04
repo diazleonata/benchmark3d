@@ -1,33 +1,41 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Enhanced 3D Web Benchmark</title>
-    <link rel="stylesheet" href="src/style.css">
-</head>
-<body>
-    <div id="ui">
-        <h2 class="glow">🚀 GPU Stress Benchmark</h2>
-        <div class="info">Quality Level:</div>
-        <select id="quality">
-            <option value="insane" selected>Insane (GPU Killer)</option>
-        </select>
-        <br>
-        <button id="startBtn">START BENCHMARK</button>
-        <div class="info">Duration: 30 seconds</div>
-        <div class="info">Press ESC to stop early</div>
-        <!-- Added hardware info display -->
-        <div id="hardwareInfo">
-            <div class="info">CPU: <span id="cpuName">Detecting...</span></div>
-            <div class="info">GPU: <span id="gpuName">Detecting...</span></div>
-            <div class="info">Cores: <span id="cpuCores"></span></div>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Enhanced 3D Web Benchmark</title>
+        <link rel="stylesheet" href="src/style.css" />
+    </head>
+    <body>
+        <div id="ui">
+            <h2 class="glow">🚀 GPU Stress Benchmark</h2>
+            <div class="info">Quality Level:</div>
+            <select id="quality">
+                <option value="insane" selected>Insane (GPU Killer)</option>
+            </select>
+            <br />
+            <button id="startBtn">START BENCHMARK</button>
+            <div class="info">Duration: 30 seconds</div>
+            <div class="info">Press ESC to stop early</div>
+            <!-- Added hardware info display -->
+            <div id="hardwareInfo">
+                <div class="info">
+                    CPU: <span id="cpuName">Detecting...</span>
+                </div>
+                <div class="info">
+                    GPU: <span id="gpuName">Detecting...</span>
+                </div>
+                <div class="info">Cores: <span id="cpuCores"></span></div>
+            </div>
         </div>
-    </div>
-    
-    <div id="fps"></div>
-    <div id="result"></div>
-    
-    <script type="module" src="src/main.js"></script>
-</body>
+
+        <div id="fps"></div>
+        <div id="result"></div>
+
+        <script type="module" src="src/main.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/eruda"></script>
+        <script>
+            eruda.init();
+        </script>
+    </body>
 </html>

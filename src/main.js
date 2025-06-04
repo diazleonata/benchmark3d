@@ -709,34 +709,10 @@ function finishBenchmark() {
     const quality = qualitySelect.value;
     const settings = qualitySettings[quality];
 
-    let performance = "";
-    let emoji = "";
-
-    // Enhanced performance categories for WebGPU
-    if (avgFPS > 55) {
-        performance = webgpuSupported ? "🔥 WEBGPU BEAST" : "🔥 BEAST MODE";
-        emoji = "🚀";
-    } else if (avgFPS > 40) {
-        performance = webgpuSupported ? "💪 WEBGPU HIGH-END" : "💪 HIGH-END";
-        emoji = "⚡";
-    } else if (avgFPS > 25) {
-        performance = "👍 MID-RANGE";
-        emoji = "🎮";
-    } else if (avgFPS > 15) {
-        performance = "😅 BUDGET";
-        emoji = "🐌";
-    } else {
-        performance = "💀 TOASTER";
-        emoji = "🔥";
-    }
-
     resultBox.innerHTML = `
-        <h2 style="color: #00ff88; margin-bottom: 15px;">${emoji} BENCHMARK COMPLETE ${emoji}</h2>
+        <h2 style="color: #00ff88; margin-bottom: 15px;">BENCHMARK COMPLETE</h2>
         <div style="font-size: 24px; margin: 10px 0; color: #ffff00;">
             Average FPS: ${avgFPS.toFixed(1)}
-        </div>
-        <div style="font-size: 18px; margin: 10px 0;">
-            Performance: ${performance}
         </div>
         <div style="font-size: 16px; margin: 10px 0; color: ${
             webgpuSupported ? "#00ff88" : "#ff8800"
