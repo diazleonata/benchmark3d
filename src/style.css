@@ -1,37 +1,86 @@
-body {
+* {
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(135deg, #0f0f0f, #1a1a2e);
+    font-family: 'Courier New', monospace;
     overflow: hidden;
-    font-family: sans-serif;
-    background-color: black;
+    color: #00ff88;
+}
+
+#ui {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 100;
+    background: rgba(0, 0, 0, 0.8);
+    border: 2px solid #00ff88;
+    border-radius: 10px;
+    padding: 20px;
+    backdrop-filter: blur(10px);
+    text-align: center;
+}
+
+#startBtn {
+    background: linear-gradient(45deg, #00ff88, #0099ff);
+    border: none;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    color: black;
+    margin: 10px 0;
+    transition: all 0.3s ease;
+}
+
+#startBtn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(0, 255, 136, 0.5);
+}
+
+#quality {
+    background: rgba(0, 0, 0, 0.7);
+    border: 1px solid #00ff88;
+    color: #00ff88;
+    padding: 8px;
+    border-radius: 4px;
+    margin: 10px 0;
 }
 
 #fps {
     position: absolute;
-    top: 10px;
-    left: 10px;
+    top: 20px;
+    right: 20px;
     z-index: 100;
 }
 
 #result {
     position: absolute;
-    top: 10px;
-    right: 10px;
-    z-index: 100;
-    background: rgba(0, 0, 0, 0.5);
-    color: white;
-    padding: 8px 12px;
-    border-radius: 8px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.9);
+    border: 3px solid #00ff88;
+    border-radius: 15px;
+    padding: 30px;
+    text-align: center;
+    font-size: 18px;
     display: none;
-    white-space: pre-line;
+    z-index: 200;
+    backdrop-filter: blur(15px);
+    box-shadow: 0 0 50px rgba(0, 255, 136, 0.3);
 }
 
-#preset {
-    position: absolute;
-    bottom: 10px;
-    left: 10px;
-    z-index: 100;
-    background: rgba(0, 0, 0, 0.5);
-    color: white;
-    padding: 8px 12px;
-    border-radius: 8px;
+.info {
+    margin: 5px 0;
+    font-size: 14px;
+}
+
+.glow {
+    text-shadow: 0 0 10px #00ff88;
 }

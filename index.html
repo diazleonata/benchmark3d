@@ -1,27 +1,27 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>3D Web Benchmark</title>
-        <link rel="stylesheet" href="src/style.css" />
-    </head>
-    <body>
-        <div id="fps"></div>
-        <div id="result"></div>
-        <div id="preset">
-            <label for="quality">Quality:</label>
-            <select id="quality">
-                <option value="low">Low</option>
-                <option value="medium" selected>Medium</option>
-                <option value="high">High</option>
-            </select>
-            <button id="startBtn">Start Benchmark</button>
-        </div>
-        <script type="module" src="src/main.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/eruda"></script>
-        <script>
-            eruda.init();
-        </script>
-    </body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enhanced 3D Web Benchmark</title>
+    <link rel="stylesheet" href="src/style.css">
+</head>
+<body>
+    <div id="ui">
+        <h2 class="glow">🚀 GPU Stress Benchmark</h2>
+        <div class="info">Quality Level:</div>
+        <select id="quality">
+            <option value="insane" selected>Insane (GPU Killer)</option>
+        </select>
+        <br>
+        <button id="startBtn">START BENCHMARK</button>
+        <div class="info">Duration: 30 seconds</div>
+        <div class="info">Press ESC to stop early</div>
+    </div>
+    
+    <div id="fps"></div>
+    <div id="result"></div>
+    
+    <script type="module" src="src/main.js"></script>
+</body>
 </html>
